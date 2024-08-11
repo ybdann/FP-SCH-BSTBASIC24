@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+    background-color: #979797;
+}
+
+.container {
+    margin-left: 1.8em;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px #cbced1;
+    background-color: rgb(255, 255, 255);
+}
+
+.content {
+    width: 100%;
+    margin-top: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.row button {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin: 2px;
+    border-radius: 4px;
+    transition: .1s;
+    background: #eeeded;
+}
+
+.row button:hover {
+    background: #fff;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.display input {
+    width: auto;
+    height: 35px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    text-align: right;
+    padding-right: .5em;
+    margin-bottom: .5em;
+}
+
+#inputScreen {
+    height: 40px;
+    font-size: 25px;
+}
+
+#outputScreen {
+    height: 50px;
+    font-size: 35px;
+}
+
+#eval {
+    color: #000000;
+}
+
+#ac {
+    font-weight: 600;
+    color: #ff0000;
+}
+
+#del {
+    font-weight: 600;
+    color: #ff0000;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 120px;
+    height: 34px;
+    background: #ccc;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container input[type="radio"] {
+    display: none;
+}
+
+.slider-container label {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%;
+    height: 30px;
+    background: #2196F3;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+#deg:checked ~ .slider {
+    transform: translateX(0);
+}
+
+#rad:checked ~ .slider {
+    transform: translateX(95%);
+}
+
